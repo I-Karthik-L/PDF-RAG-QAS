@@ -1,0 +1,27 @@
+# Virtual environment
+venv/
+.venv/
+
+# Environment variables / API keys
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Uploaded PDFs
+uploads/
+uploads-test/
+
+# Chroma database
+chroma_db/
+
+# Generated files
+documents.json
+
+# OS files
+.DS_Store
+Thumbs.db

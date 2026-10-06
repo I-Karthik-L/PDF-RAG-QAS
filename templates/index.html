@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-PDF RAG Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <main class="shell">
+        <section class="hero">
+            <div>
+                <p class="eyebrow">Local document Q&amp;A</p>
+                <h1>Ask across the PDFs you choose.</h1>
+            </div>
+            <p class="hero-note">Embeddings are created once when you upload.</p>
+        </section>
+
+        <section class="workspace">
+            <aside class="panel document-panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="label">Uploaded documents</p>
+                        <p id="document-count" class="hint">Loading documents…</p>
+                    </div>
+                </div>
+                <div id="document-list" class="document-list" aria-live="polite"></div>
+                <div class="upload-group">
+                    <label for="pdf-files" class="upload-label">+ Upload PDFs</label>
+                    <input id="pdf-files" type="file" accept="application/pdf,.pdf" multiple>
+                    <p class="hint">PDF files up to 25 MB. Processing happens at upload time.</p>
+                </div>
+            </aside>
+
+            <section class="panel chat-panel">
+                <div id="chat-history" class="chat-history" aria-live="polite">
+                    <div class="welcome-message">
+                        <p class="label">Ready to help</p>
+                        <p>Select one or more documents, then ask a question. Answers cite the documents and pages used for retrieval.</p>
+                    </div>
+                </div>
+                <form id="question-form" class="composer">
+                    <label for="question" class="label">Your question</label>
+                    <textarea id="question" rows="3" placeholder="What do the selected documents say about…?" required></textarea>
+                    <div class="composer-footer">
+                        <span id="status-message" class="hint">Select documents to begin.</span>
+                        <button id="submit-button" type="submit">Ask question</button>
+                    </div>
+                </form>
+            </section>
+        </section>
+    </main>
+    <script src="/static/app.js"></script>
+</body>
+</html>
