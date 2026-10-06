@@ -76,7 +76,7 @@ project_rag/
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/I-Karthik-L/PDF-RAG-QAS.git
 cd your-repo
 ```
 
