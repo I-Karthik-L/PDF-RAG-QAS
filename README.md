@@ -244,7 +244,6 @@ Returns the server status, the number of loaded documents, and the last error (i
 
 * The first upload or question may take time because the embedding model is downloaded on first use (internet required for initial setup)
 * This is designed as a local, single-process application
-* Optionally place `NIPS-2017-attention-is-all-you-need-Paper.pdf` in the project folder and it is registered as a bundled sample on startup
 * **Deployment:** serverless hosts such as Vercel have a read-only filesystem apart from a temporary `/tmp` that is cleared between requests, and PyTorch is large for function size limits. For a public deployment, use a host with a persistent disk (Render, Railway, a Hugging Face Space), or move to a hosted vector database and hosted embeddings
 
 ---
